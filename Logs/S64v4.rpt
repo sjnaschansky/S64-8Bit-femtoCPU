@@ -1,0 +1,907 @@
+ 
+cpldfit:  version O.87xd                            Xilinx Inc.
+                                  Fitter Report
+Design Name: S64v4                               Date:  2- 9-2018,  1:17PM
+Device Used: XC2C64A-7-VQ44
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+63 /64  ( 98%) 192 /224  ( 86%) 114 /160  ( 71%) 43 /64  ( 67%) 22 /33  ( 67%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*    33/40    56/56*    6/ 8    0/1      0/1      0/1      0/1
+FB2      16/16*    24/40    56/56*    5/ 9    0/1      0/1      0/1      0/1
+FB3      16/16*    32/40    49/56     8/ 9    0/1      0/1      0/1      0/1
+FB4      15/16     25/40    31/56     0/ 7    0/1      0/1      0/1      0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total    63/64    114/160  192/224   19/33    0/4      0/4      0/4      0/4 
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+1/3         1/1         1/4         0/0
+
+Signal 'Clk' mapped onto global clock net GCK0.
+Signal 'DWE.GLB' mapped onto global output enable net GTS1.
+Signal 'Res' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    1           1    |  I/O              :    15     25
+Output        :   11          11    |  GCK/IO           :     2      3
+Bidirectional :    8           8    |  GTS/IO           :     4      4
+GCK           :    1           1    |  GSR/IO           :     1      1
+GTS           :    0           0    |  
+GSR           :    1           1    |  
+                 ----        ----
+        Total     22          22
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'S64v4.ise'.
+*************************  Summary of Mapped Logic  ************************
+
+** 19 Outputs **
+
+Signal                                Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                                  Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+Addres<5>                             3     10    2    FB1_2   37    I/O       O       LVCMOS18           FAST DFF     RESET
+Data<2>                               10    11    2    FB1_3   36    I/O       I/O     LVCMOS18 KPR       FAST TFF     RESET
+DWE                                   2     6     2    FB1_9   34    GTS/I/O   O       LVCMOS18           FAST DFF     RESET
+Data<1>                               6     8     2    FB1_10  33    GTS/I/O   I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<0>                               4     6     2    FB1_11  32    GTS/I/O   I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<4>                               5     8     2    FB1_12  31    GTS/I/O   I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<3>                               5     8     1    FB2_1   39    I/O       I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<5>                               5     8     1    FB2_2   40    I/O       I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<6>                               5     8     1    FB2_5   41    I/O       I/O     LVCMOS18 KPR       FAST TFF     RESET
+Data<7>                               5     8     1    FB2_6   42    I/O       I/O     LVCMOS18 KPR       FAST TFF     RESET
+DRE                                   2     5     1    FB2_8   44    GCK/I/O   O       LVCMOS18           FAST DFF     RESET
+Addres<2>                             3     5     2    FB3_1   29    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<0>                             3     5     2    FB3_2   28    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<1>                             3     5     2    FB3_3   27    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<3>                             3     5     2    FB3_6   23    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<6>                             2     4     2    FB3_10  22    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<7>                             2     4     2    FB3_11  21    I/O       O       LVCMOS18           FAST DFF     RESET
+Addres<4>                             3     5     2    FB3_12  20    I/O       O       LVCMOS18           FAST DFF     RESET
+IRE                                   2     3     2    FB3_14  19    I/O       O       LVCMOS18           FAST DFF     RESET
+
+** 44 Buried Nodes **
+
+Signal                                Total Total Loc     Reg     Reg Init
+Name                                  Pts   Inps          Use     State
+CE0                                   4     11    FB1_1   DFF     RESET
+Acc_Mode0_Buf                         2     5     FB1_4   DFF     RESET
+Acc_En_Buf                            2     5     FB1_5   DFF     RESET
+PC_0_2                                3     8     FB1_6   TFF     RESET
+PC_0_0                                2     6     FB1_7   TFF     RESET
+CurrentState_FSM_FFd1                 2     6     FB1_8   TFF/S   SET
+PC_0_3                                1     5     FB1_13  TFF     RESET
+N_PZ_331                              3     10    FB1_14          
+PC_0_4                                3     9     FB1_15  TFF     RESET
+PC_0_1                                4     10    FB1_16  TFF     RESET
+Madd_ExtendedALU_add0000_CARRY_IN<7>  3     3     FB2_3           
+Madd_ExtendedALU_add0000_CARRY_IN<4>  3     3     FB2_4           
+N_PZ_353                              3     3     FB2_7           
+N_PZ_341                              2     4     FB2_9           
+N_PZ_345                              3     3     FB2_10          
+N_PZ_306                              2     5     FB2_11          
+N_PZ_298                              3     3     FB2_12          
+Msub_ExtendedALU_sub0000_CARRY_IN<6>  3     3     FB2_13          
+CurrentState_FSM_FFd2                 2     5     FB2_14  TFF     RESET
+Acc_Mode1_Buf                         2     5     FB2_15  DFF     RESET
+Carry                                 9     9     FB2_16  DFF     RESET
+PC_0_7                                2     4     FB3_4   TFF     RESET
+N_PZ_315                              3     4     FB3_5           
+Msub_ExtendedALU_sub0000_CARRY_IN<3>  6     6     FB3_7           
+N_PZ_287                              1     3     FB3_8           
+N_PZ_280                              3     4     FB3_9           
+PC_Madd__add0000_Result<3>1           5     6     FB3_13          
+PC_0_6                                2     3     FB3_15  TFF     RESET
+PC_Madd__add0000_Result<3>13          7     8     FB3_16          
+N_PZ_349                              3     3     FB4_2           
+InputBuffer<4>                        2     2     FB4_3   DEFF    RESET
+InputBuffer<3>                        2     2     FB4_4   DEFF    RESET
+InputBuffer<2>                        2     2     FB4_5   DEFF    RESET
+InputBuffer<1>                        2     2     FB4_6   DEFF    RESET
+N_PZ_339                              2     3     FB4_7           
+InputBuffer<0>                        2     2     FB4_8   DEFF    RESET
+PC_0_5                                1     2     FB4_9   TFF     RESET
+N_PZ_352                              3     3     FB4_10          
+N_PZ_301                              2     3     FB4_11          
+CECPU                                 1     1     FB4_12  DFF     RESET
+
+Signal                                Total Total Loc     Reg     Reg Init
+Name                                  Pts   Inps          Use     State
+InputBuffer<7>                        2     2     FB4_13  DEFF    RESET
+InputBuffer<6>                        2     2     FB4_14  DEFF    RESET
+InputBuffer<5>                        2     2     FB4_15  DEFF    RESET
+N_PZ_299                              3     3     FB4_16          
+
+** 11 Inputs **
+
+Signal                                Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                                               No.   Type      Use     STD      Style
+CE                                    2    FB1_1   38    I/O       I       LVCMOS18 KPR
+Data<2>                               2    FB1_3   36    I/O       I/O     LVCMOS18 KPR
+Data<1>                               2    FB1_10  33    GTS/I/O   I/O     LVCMOS18 KPR
+Data<0>                               2    FB1_11  32    GTS/I/O   I/O     LVCMOS18 KPR
+Data<4>                               2    FB1_12  31    GTS/I/O   I/O     LVCMOS18 KPR
+Res                                   2    FB1_13  30    GSR/I/O   GSR     LVCMOS18 KPR
+Data<3>                               1    FB2_1   39    I/O       I/O     LVCMOS18 KPR
+Data<5>                               1    FB2_2   40    I/O       I/O     LVCMOS18 KPR
+Data<6>                               1    FB2_5   41    I/O       I/O     LVCMOS18 KPR
+Data<7>                               1    FB2_6   42    I/O       I/O     LVCMOS18 KPR
+Clk                                   1    FB2_7   43    GCK/I/O   GCK     LVCMOS18 KPR
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               33/7
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   56/0
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+CE0                           4     FB1_1   38   I/O     I                 
+Addres<5>                     3     FB1_2   37   I/O     O                 
+Data<2>                       10    FB1_3   36   I/O     I/O               
+Acc_Mode0_Buf                 2     FB1_4        (b)     (b)               
+Acc_En_Buf                    2     FB1_5        (b)     (b)               
+PC_0_2                        3     FB1_6        (b)     (b)               
+PC_0_0                        2     FB1_7        (b)     (b)               
+CurrentState_FSM_FFd1         2     FB1_8        (b)     (b)               
+DWE                           2     FB1_9   34   GTS/I/O O                 
+Data<1>                       6     FB1_10  33   GTS/I/O I/O               
+Data<0>                       4     FB1_11  32   GTS/I/O I/O               
+Data<4>                       5     FB1_12  31   GTS/I/O I/O               
+PC_0_3                        1     FB1_13  30   GSR/I/O GSR               
+N_PZ_331                      3     FB1_14       (b)     (b)               
+PC_0_4                        3     FB1_15       (b)     (b)               
+PC_0_1                        4     FB1_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: Acc_En_Buf             12: Data<2>                               23: N_PZ_287 
+  2: Acc_Mode0_Buf          13: Data<4>                               24: N_PZ_298 
+  3: Acc_Mode1_Buf          14: InputBuffer<0>                        25: N_PZ_306 
+  4: Addres<5>              15: InputBuffer<1>                        26: N_PZ_315 
+  5: CECPU                  16: InputBuffer<2>                        27: N_PZ_339 
+  6: Carry                  17: InputBuffer<4>                        28: PC_0_0 
+  7: CurrentState_FSM_FFd1  18: InputBuffer<5>                        29: PC_0_1 
+  8: CurrentState_FSM_FFd2  19: InputBuffer<6>                        30: PC_0_4 
+  9: DWE                    20: InputBuffer<7>                        31: PC_0_5 
+ 10: Data<0>                21: Madd_ExtendedALU_add0000_CARRY_IN<4>  32: PC_Madd__add0000_Result<3>1 
+ 11: Data<1>                22: N_PZ_280                              33: PC_Madd__add0000_Result<3>13 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+CE0               ....XXXX........XXXX..X...X..X.......... 11      
+Addres<5>         ...XX.XX.........XXX..X.X.....X......... 10      
+Data<2>           XXX.X....XXX.XXX.........X.............. 11      
+Acc_Mode0_Buf     .X..X.XX.........X...................... 5       
+Acc_En_Buf        X...X.XX...........X.................... 5       
+PC_0_2            ....X.X........X.....XX.X..XX........... 8       
+PC_0_0            ....X.X......X....XX..X................. 6       
+CurrentState_FSM_FFd1 
+                  ....XXXX..........XX.................... 6       
+DWE               ....X.XXX.........XX.................... 6       
+Data<1>           XXX.X....XX..XX......................... 8       
+Data<0>           XXX.X....X...X.......................... 6       
+Data<4>           XXX.X.......X...X...X..X................ 8       
+PC_0_3            ....X.X.................X......XX....... 5       
+N_PZ_331          ....XXXX........XXXX......X..X.......... 10      
+PC_0_4            ....XXXX........X.XX..X...X............. 9       
+PC_0_1            ....XXXX.....XX...XX..X....X............ 10      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               24/16
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   56/0
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+Data<3>                       5     FB2_1   39   I/O     I/O               
+Data<5>                       5     FB2_2   40   I/O     I/O               
+Madd_ExtendedALU_add0000_CARRY_IN<7>
+                              3     FB2_3        (b)     (b)               
+Madd_ExtendedALU_add0000_CARRY_IN<4>
+                              3     FB2_4        (b)     (b)               
+Data<6>                       5     FB2_5   41   I/O     I/O               
+Data<7>                       5     FB2_6   42   I/O     I/O               
+N_PZ_353                      3     FB2_7   43   GCK/I/O GCK               
+DRE                           2     FB2_8   44   GCK/I/O O                 
+N_PZ_341                      2     FB2_9        (b)     (b)               
+N_PZ_345                      3     FB2_10  1    GCK/I/O (b)               
+N_PZ_306                      2     FB2_11       (b)     (b)               
+N_PZ_298                      3     FB2_12  2    I/O     (b)               
+Msub_ExtendedALU_sub0000_CARRY_IN<6>
+                              3     FB2_13  3    I/O     (b)               
+CurrentState_FSM_FFd2         2     FB2_14       (b)     (b)               
+Acc_Mode1_Buf                 2     FB2_15       (b)     (b)               
+Carry                         9     FB2_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: Acc_En_Buf              9: Data<3>           17: Madd_ExtendedALU_add0000_CARRY_IN<7> 
+  2: Acc_Mode0_Buf          10: Data<5>           18: Msub_ExtendedALU_sub0000_CARRY_IN<3> 
+  3: Acc_Mode1_Buf          11: Data<6>           19: Msub_ExtendedALU_sub0000_CARRY_IN<6> 
+  4: CECPU                  12: Data<7>           20: N_PZ_299 
+  5: Carry                  13: InputBuffer<3>    21: N_PZ_345 
+  6: CurrentState_FSM_FFd1  14: InputBuffer<5>    22: N_PZ_349 
+  7: CurrentState_FSM_FFd2  15: InputBuffer<6>    23: N_PZ_352 
+  8: DRE                    16: InputBuffer<7>    24: N_PZ_353 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+Data<3>           XXXX....X...X....X...X.................. 8       
+Data<5>           XXXX.....X...X.....X..X................. 8       
+Madd_ExtendedALU_add0000_CARRY_IN<7> 
+                  ..........X...X........X................ 3       
+Madd_ExtendedALU_add0000_CARRY_IN<4> 
+                  ........X...X........X.................. 3       
+Data<6>           XXXX......X...X...X....X................ 8       
+Data<7>           XXXX.......X...XX...X................... 8       
+N_PZ_353          .........X...X.....X.................... 3       
+DRE               ...X.XXX.......X........................ 5       
+N_PZ_341          ....X.X.......XX........................ 4       
+N_PZ_345          ..........X...X...X..................... 3       
+N_PZ_306          ...X.XX.......XX........................ 5       
+N_PZ_298          ........X...X....X...................... 3       
+Msub_ExtendedALU_sub0000_CARRY_IN<6> 
+                  .........X...X........X................. 3       
+CurrentState_FSM_FFd2 
+                  ...X.XX.......XX........................ 5       
+Acc_Mode1_Buf     ..XX.XX.......X......................... 5       
+Carry             XXXXX......X...XX...X................... 9       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               32/8
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   49/7
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+Addres<2>                     3     FB3_1   29   I/O     O                 
+Addres<0>                     3     FB3_2   28   I/O     O                 
+Addres<1>                     3     FB3_3   27   I/O     O                 
+PC_0_7                        2     FB3_4        (b)     (b)               
+N_PZ_315                      3     FB3_5        (b)     (b)               
+Addres<3>                     3     FB3_6   23   I/O     O                 
+Msub_ExtendedALU_sub0000_CARRY_IN<3>
+                              6     FB3_7        (b)     (b)               
+N_PZ_287                      1     FB3_8        (b)     (b)               
+N_PZ_280                      3     FB3_9        (b)     (b)               
+Addres<6>                     2     FB3_10  22   I/O     O                 
+Addres<7>                     2     FB3_11  21   I/O     O                 
+Addres<4>                     3     FB3_12  20   I/O     O                 
+PC_Madd__add0000_Result<3>1   5     FB3_13       (b)     (b)               
+IRE                           2     FB3_14  19   I/O     O                 
+PC_0_6                        2     FB3_15  18   I/O     (b)               
+PC_Madd__add0000_Result<3>13  7     FB3_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: Addres<0>              12: Data<1>           23: N_PZ_331 
+  2: Addres<1>              13: Data<2>           24: N_PZ_341 
+  3: Addres<2>              14: IRE               25: PC_0_0 
+  4: Addres<3>              15: InputBuffer<0>    26: PC_0_1 
+  5: Addres<4>              16: InputBuffer<1>    27: PC_0_2 
+  6: Addres<6>              17: InputBuffer<2>    28: PC_0_3 
+  7: Addres<7>              18: InputBuffer<3>    29: PC_0_4 
+  8: CE0.COMB               19: InputBuffer<4>    30: PC_0_5 
+  9: CECPU                  20: N_PZ_280          31: PC_0_6 
+ 10: CurrentState_FSM_FFd1  21: N_PZ_287          32: PC_0_7 
+ 11: Data<0>                22: N_PZ_306         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+Addres<2>         ..X.............X...XX....X............. 5       
+Addres<0>         X.............X.....XX..X............... 5       
+Addres<1>         .X.............X....XX...X.............. 5       
+PC_0_7            .......X..............X......XX......... 4       
+N_PZ_315          ..........XX..XX........................ 4       
+Addres<3>         ...X.............X..XX.....X............ 5       
+Msub_ExtendedALU_sub0000_CARRY_IN<3> 
+                  ..........XXX.XXX....................... 6       
+N_PZ_287          ........XX.............X................ 3       
+N_PZ_280          ..............XX........XX.............. 4       
+Addres<6>         .....X..............XX........X......... 4       
+Addres<7>         ......X.............XX.........X........ 4       
+Addres<4>         ....X.............X.XX......X........... 5       
+PC_Madd__add0000_Result<3>1 
+                  .........X......XX.X...X..X............. 6       
+IRE               ........X....X......X................... 3       
+PC_0_6            .......X..............X......X.......... 3       
+PC_Madd__add0000_Result<3>13 
+                  .........X......XX.X...XXXX............. 8       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               25/15
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   31/25
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB4_1   5    I/O           
+N_PZ_349                      3     FB4_2   6    I/O     (b)               
+InputBuffer<4>                2     FB4_3        (b)     (b)               
+InputBuffer<3>                2     FB4_4        (b)     (b)               
+InputBuffer<2>                2     FB4_5        (b)     (b)               
+InputBuffer<1>                2     FB4_6        (b)     (b)               
+N_PZ_339                      2     FB4_7   8    I/O     (b)               
+InputBuffer<0>                2     FB4_8        (b)     (b)               
+PC_0_5                        1     FB4_9        (b)     (b)               
+N_PZ_352                      3     FB4_10       (b)     (b)               
+N_PZ_301                      2     FB4_11  12   I/O     (b)               
+CECPU                         1     FB4_12       (b)     (b)               
+InputBuffer<7>                2     FB4_13  13   I/O     (b)               
+InputBuffer<6>                2     FB4_14  14   I/O     (b)               
+InputBuffer<5>                2     FB4_15  16   I/O     (b)               
+N_PZ_299                      3     FB4_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: CE0               10: Data<4>           18: Madd_ExtendedALU_add0000_CARRY_IN<4> 
+  2: CE0.COMB          11: Data<4>.PIN       19: N_PZ_298 
+  3: CECPU             12: Data<5>.PIN       20: N_PZ_301 
+  4: DRE               13: Data<6>.PIN       21: N_PZ_315 
+  5: Data<0>.PIN       14: Data<7>.PIN       22: N_PZ_331 
+  6: Data<1>.PIN       15: IRE               23: PC_0_3 
+  7: Data<2>           16: InputBuffer<2>    24: PC_Madd__add0000_Result<3>1 
+  8: Data<2>.PIN       17: InputBuffer<4>    25: PC_Madd__add0000_Result<3>13 
+  9: Data<3>.PIN      
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+N_PZ_349          ......X........X....X................... 3       
+InputBuffer<4>    ..........X........X.................... 2       
+InputBuffer<3>    ........X..........X.................... 2       
+InputBuffer<2>    .......X...........X.................... 2       
+InputBuffer<1>    .....X.............X.................... 2       
+N_PZ_339          ......................XXX............... 3       
+InputBuffer<0>    ....X..............X.................... 2       
+PC_0_5            .X...................X.................. 2       
+N_PZ_352          .........X......X.X..................... 3       
+N_PZ_301          ..XX..........X......................... 3       
+CECPU             X....................................... 1       
+InputBuffer<7>    .............X.....X.................... 2       
+InputBuffer<6>    ............X......X.................... 2       
+InputBuffer<5>    ...........X.......X.................... 2       
+N_PZ_299          .........X......XX...................... 3       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+FDCPE_Acc_En_Buf: FDCPE port map (Acc_En_Buf,Acc_En_Buf_D,Clk,Res,'0','1');
+Acc_En_Buf_D <= ((NOT CECPU AND Acc_En_Buf)
+	OR (InputBuffer(7) AND CurrentState_FSM_FFd1 AND 
+	CurrentState_FSM_FFd2 AND CECPU));
+
+FDCPE_Acc_Mode0_Buf: FDCPE port map (Acc_Mode0_Buf,Acc_Mode0_Buf_D,Clk,Res,'0','1');
+Acc_Mode0_Buf_D <= ((NOT CECPU AND Acc_Mode0_Buf)
+	OR (CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND 
+	CECPU AND InputBuffer(5)));
+
+FDCPE_Acc_Mode1_Buf: FDCPE port map (Acc_Mode1_Buf,Acc_Mode1_Buf_D,Clk,Res,'0','1');
+Acc_Mode1_Buf_D <= ((NOT CECPU AND Acc_Mode1_Buf)
+	OR (InputBuffer(6) AND CurrentState_FSM_FFd1 AND 
+	CurrentState_FSM_FFd2 AND CECPU));
+
+FDCPE_Addres0: FDCPE port map (Addres(0),Addres_D(0),Clk,Res,'0','1');
+Addres_D(0) <= ((PC_0_0 AND N_PZ_287)
+	OR (InputBuffer(0) AND N_PZ_306)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(0)));
+
+FDCPE_Addres1: FDCPE port map (Addres(1),Addres_D(1),Clk,Res,'0','1');
+Addres_D(1) <= ((InputBuffer(1) AND N_PZ_306)
+	OR (N_PZ_287 AND PC_0_1)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(1)));
+
+FDCPE_Addres2: FDCPE port map (Addres(2),Addres_D(2),Clk,Res,'0','1');
+Addres_D(2) <= ((InputBuffer(2) AND N_PZ_306)
+	OR (N_PZ_287 AND PC_0_2)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(2)));
+
+FDCPE_Addres3: FDCPE port map (Addres(3),Addres_D(3),Clk,Res,'0','1');
+Addres_D(3) <= ((InputBuffer(3) AND N_PZ_306)
+	OR (N_PZ_287 AND PC_0_3)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(3)));
+
+FDCPE_Addres4: FDCPE port map (Addres(4),Addres_D(4),Clk,Res,'0','1');
+Addres_D(4) <= ((InputBuffer(4) AND N_PZ_306)
+	OR (N_PZ_287 AND PC_0_4)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(4)));
+
+FDCPE_Addres5: FDCPE port map (Addres(5),Addres_D(5),Clk,Res,'0','1');
+Addres_D(5) <= ((N_PZ_287 AND PC_0_5)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(5))
+	OR (InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND InputBuffer(5)));
+
+FDCPE_Addres6: FDCPE port map (Addres(6),Addres_D(6),Clk,Res,'0','1');
+Addres_D(6) <= ((N_PZ_287 AND PC_0_6)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(6)));
+
+FDCPE_Addres7: FDCPE port map (Addres(7),Addres_D(7),Clk,Res,'0','1');
+Addres_D(7) <= ((N_PZ_287 AND PC_0_7)
+	OR (NOT N_PZ_287 AND NOT N_PZ_306 AND Addres(7)));
+
+
+CE0.COMB <= ((N_PZ_287 AND PC_0_4 AND NOT N_PZ_339)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CECPU AND NOT InputBuffer(5) AND PC_0_4 AND NOT N_PZ_339)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	NOT InputBuffer(5) AND InputBuffer(4) AND PC_0_4)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	NOT InputBuffer(5) AND InputBuffer(4) AND NOT N_PZ_339));FDCPE_CE0: FDCPE port map (CE0,CE,Clk,Res,'0','1');
+
+FDCPE_CECPU: FDCPE port map (CECPU,CE0,Clk,Res,'0','1');
+
+FDCPE_Carry: FDCPE port map (Carry,Carry_D,Clk,Res,'0','1');
+Carry_D <= ((NOT CECPU AND Carry)
+	OR (Carry AND NOT Acc_Mode1_Buf)
+	OR (Carry AND NOT Acc_En_Buf)
+	OR (InputBuffer(7) AND CECPU AND Acc_Mode1_Buf AND 
+	Acc_En_Buf AND Data(7) AND NOT Acc_Mode0_Buf)
+	OR (InputBuffer(7) AND CECPU AND Acc_Mode1_Buf AND 
+	Acc_En_Buf AND NOT Data(7) AND Acc_Mode0_Buf)
+	OR (InputBuffer(7) AND CECPU AND Acc_Mode1_Buf AND 
+	Acc_En_Buf AND Acc_Mode0_Buf AND N_PZ_345)
+	OR (InputBuffer(7) AND CECPU AND Acc_Mode1_Buf AND 
+	Acc_En_Buf AND NOT Acc_Mode0_Buf AND 
+	NOT Madd_ExtendedALU_add0000_CARRY_IN(7))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND Data(7) AND 
+	NOT Acc_Mode0_Buf AND NOT Madd_ExtendedALU_add0000_CARRY_IN(7))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND NOT Data(7) AND 
+	Acc_Mode0_Buf AND N_PZ_345));
+
+FTCPE_CurrentState_FSM_FFd1: FTCPE port map (CurrentState_FSM_FFd1,CurrentState_FSM_FFd1_T,Clk,Res,'0','1');
+CurrentState_FSM_FFd1_T <= NOT (((NOT CECPU)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND NOT Carry)));
+
+FTCPE_CurrentState_FSM_FFd2: FTCPE port map (CurrentState_FSM_FFd2,CurrentState_FSM_FFd2_T,Clk,Res,'0','1');
+CurrentState_FSM_FFd2_T <= ((CurrentState_FSM_FFd1 AND CECPU)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	CurrentState_FSM_FFd2 AND CECPU));
+
+FDCPE_DRE: FDCPE port map (DRE,DRE_D,Clk,Res,'0','1');
+DRE_D <= ((NOT CECPU AND DRE)
+	OR (InputBuffer(7) AND NOT CurrentState_FSM_FFd1 AND 
+	CurrentState_FSM_FFd2 AND CECPU));
+
+FDCPE_DWE: FDCPE port map (DWE,DWE_D,Clk,Res,'0','1');
+DWE_D <= ((NOT CECPU AND DWE)
+	OR (InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU));
+
+FTCPE_Data0: FTCPE port map (Data_I(0),Data_T(0),Clk,Res,'0','1');
+Data_T(0) <= (CECPU AND Acc_En_Buf AND InputBuffer(0))
+	XOR ((CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND Data(0))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT Data(0))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT InputBuffer(0) AND Data(0)));
+Data(0) <= Data_I(0) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data1: FTCPE port map (Data_I(1),Data_T(1),Clk,Res,'0','1');
+Data_T(1) <= (CECPU AND Acc_En_Buf AND InputBuffer(1))
+	XOR ((CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND Data(1))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT InputBuffer(1))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT Data(1))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND InputBuffer(0) AND NOT Data(0))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND InputBuffer(0) AND Data(0)));
+Data(1) <= Data_I(1) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data2: FTCPE port map (Data_I(2),Data_T(2),Clk,Res,'0','1');
+Data_T(2) <= (CECPU AND Acc_En_Buf AND InputBuffer(2))
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND N_PZ_315)
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND Data(2))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT InputBuffer(2))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT Data(2))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	InputBuffer(0) AND NOT Data(0) AND N_PZ_315)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND InputBuffer(1) AND NOT Data(1) AND NOT N_PZ_315)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Data(1) AND InputBuffer(0) AND NOT Data(0))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	InputBuffer(2) AND NOT Data(1) AND InputBuffer(0) AND N_PZ_315)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT InputBuffer(2) AND InputBuffer(1) AND NOT Data(1) AND N_PZ_315));
+Data(2) <= Data_I(2) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data3: FTCPE port map (Data_I(3),Data_T(3),Clk,Res,'0','1');
+Data_T(3) <= (CECPU AND Acc_En_Buf AND NOT InputBuffer(3))
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Msub_ExtendedALU_sub0000_CARRY_IN(3))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT N_PZ_349)
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Data(3))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND InputBuffer(3) AND Data(3)));
+Data(3) <= Data_I(3) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data4: FTCPE port map (Data_I(4),Data_T(4),Clk,Res,'0','1');
+Data_T(4) <= (CECPU AND Acc_En_Buf AND NOT InputBuffer(4))
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND N_PZ_298)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT Madd_ExtendedALU_add0000_CARRY_IN(4))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Data(4))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND InputBuffer(4) AND Data(4)));
+Data(4) <= Data_I(4) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data5: FTCPE port map (Data_I(5),Data_T(5),Clk,Res,'0','1');
+Data_T(5) <= (CECPU AND Acc_En_Buf AND NOT InputBuffer(5))
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT N_PZ_352)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND NOT N_PZ_299)
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Data(5))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND InputBuffer(5) AND Data(5)));
+Data(5) <= Data_I(5) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data6: FTCPE port map (Data_I(6),Data_T(6),Clk,Res,'0','1');
+Data_T(6) <= (NOT InputBuffer(6) AND CECPU AND Acc_En_Buf)
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Msub_ExtendedALU_sub0000_CARRY_IN(6))
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND N_PZ_353)
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT Data(6))
+	OR (InputBuffer(6) AND CECPU AND NOT Acc_Mode1_Buf AND 
+	Acc_En_Buf AND NOT Acc_Mode0_Buf AND Data(6)));
+Data(6) <= Data_I(6) when DWE.GLB = '1' else 'Z';
+
+FTCPE_Data7: FTCPE port map (Data_I(7),Data_T(7),Clk,Res,'0','1');
+Data_T(7) <= (NOT InputBuffer(7) AND CECPU AND Acc_En_Buf)
+	XOR ((CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	Acc_Mode0_Buf AND NOT N_PZ_345)
+	OR (CECPU AND Acc_Mode1_Buf AND Acc_En_Buf AND 
+	NOT Acc_Mode0_Buf AND Madd_ExtendedALU_add0000_CARRY_IN(7))
+	OR (CECPU AND NOT Acc_Mode1_Buf AND Acc_En_Buf AND NOT Data(7) AND 
+	Acc_Mode0_Buf)
+	OR (InputBuffer(7) AND CECPU AND NOT Acc_Mode1_Buf AND 
+	Acc_En_Buf AND Data(7) AND NOT Acc_Mode0_Buf));
+Data(7) <= Data_I(7) when DWE.GLB = '1' else 'Z';
+
+FDCPE_IRE: FDCPE port map (IRE,IRE_D,Clk,Res,'0','1');
+IRE_D <= ((N_PZ_287)
+	OR (NOT CECPU AND IRE));
+
+FDCPE_InputBuffer0: FDCPE port map (InputBuffer(0),Data(0).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer1: FDCPE port map (InputBuffer(1),Data(1).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer2: FDCPE port map (InputBuffer(2),Data(2).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer3: FDCPE port map (InputBuffer(3),Data(3).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer4: FDCPE port map (InputBuffer(4),Data(4).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer5: FDCPE port map (InputBuffer(5),Data(5).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer6: FDCPE port map (InputBuffer(6),Data(6).PIN,Clk,Res,'0',N_PZ_301);
+
+FDCPE_InputBuffer7: FDCPE port map (InputBuffer(7),Data(7).PIN,Clk,Res,'0',N_PZ_301);
+
+
+Madd_ExtendedALU_add0000_CARRY_IN(4) <= ((InputBuffer(3) AND Data(3))
+	OR (InputBuffer(3) AND N_PZ_349)
+	OR (Data(3) AND N_PZ_349));
+
+
+Madd_ExtendedALU_add0000_CARRY_IN(7) <= ((NOT InputBuffer(6) AND NOT Data(6))
+	OR (NOT InputBuffer(6) AND N_PZ_353)
+	OR (NOT Data(6) AND N_PZ_353));
+
+
+Msub_ExtendedALU_sub0000_CARRY_IN(3) <= (NOT InputBuffer(2) AND Data(2))
+	XOR ((InputBuffer(2) AND NOT Data(2))
+	OR (NOT InputBuffer(2) AND Data(2))
+	OR (InputBuffer(1) AND NOT Data(1))
+	OR (InputBuffer(1) AND InputBuffer(0) AND NOT Data(0))
+	OR (NOT Data(1) AND InputBuffer(0) AND NOT Data(0)));
+
+
+Msub_ExtendedALU_sub0000_CARRY_IN(6) <= ((InputBuffer(5) AND NOT Data(5))
+	OR (InputBuffer(5) AND N_PZ_352)
+	OR (NOT Data(5) AND N_PZ_352));
+
+
+N_PZ_280 <= ((InputBuffer(1) AND PC_0_1)
+	OR (PC_0_0 AND InputBuffer(1) AND InputBuffer(0))
+	OR (PC_0_0 AND InputBuffer(0) AND PC_0_1));
+
+
+N_PZ_287 <= (NOT CurrentState_FSM_FFd1 AND CECPU AND N_PZ_341);
+
+
+N_PZ_298 <= ((NOT InputBuffer(3) AND Data(3))
+	OR (NOT InputBuffer(3) AND 
+	NOT Msub_ExtendedALU_sub0000_CARRY_IN(3))
+	OR (Data(3) AND NOT Msub_ExtendedALU_sub0000_CARRY_IN(3)));
+
+
+N_PZ_299 <= ((InputBuffer(4) AND Data(4))
+	OR (InputBuffer(4) AND 
+	Madd_ExtendedALU_add0000_CARRY_IN(4))
+	OR (Data(4) AND Madd_ExtendedALU_add0000_CARRY_IN(4)));
+
+
+N_PZ_301 <= ((CECPU AND DRE)
+	OR (CECPU AND IRE));
+
+
+N_PZ_306 <= ((InputBuffer(6) AND NOT CurrentState_FSM_FFd1 AND 
+	CurrentState_FSM_FFd2 AND CECPU)
+	OR (InputBuffer(7) AND NOT CurrentState_FSM_FFd1 AND 
+	CurrentState_FSM_FFd2 AND CECPU));
+
+
+N_PZ_315 <= ((InputBuffer(1) AND Data(1))
+	OR (InputBuffer(1) AND InputBuffer(0) AND Data(0))
+	OR (Data(1) AND InputBuffer(0) AND Data(0)));
+
+
+N_PZ_331 <= ((NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	InputBuffer(5) AND NOT InputBuffer(4) AND NOT PC_0_4)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	InputBuffer(5) AND NOT InputBuffer(4) AND N_PZ_339)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	InputBuffer(5) AND NOT PC_0_4 AND N_PZ_339));
+
+
+N_PZ_339 <= ((PC_Madd__add0000_Result(3)13)
+	OR (NOT PC_0_3 AND PC_Madd__add0000_Result(3)1));
+
+
+N_PZ_341 <= ((NOT CurrentState_FSM_FFd2)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND Carry));
+
+
+N_PZ_345 <= ((InputBuffer(6) AND NOT Data(6))
+	OR (InputBuffer(6) AND 
+	Msub_ExtendedALU_sub0000_CARRY_IN(6))
+	OR (NOT Data(6) AND Msub_ExtendedALU_sub0000_CARRY_IN(6)));
+
+
+N_PZ_349 <= ((InputBuffer(2) AND Data(2))
+	OR (InputBuffer(2) AND N_PZ_315)
+	OR (Data(2) AND N_PZ_315));
+
+
+N_PZ_352 <= ((InputBuffer(4) AND NOT Data(4))
+	OR (InputBuffer(4) AND NOT N_PZ_298)
+	OR (NOT Data(4) AND NOT N_PZ_298));
+
+
+N_PZ_353 <= ((NOT InputBuffer(5) AND NOT Data(5))
+	OR (NOT InputBuffer(5) AND NOT N_PZ_299)
+	OR (NOT Data(5) AND NOT N_PZ_299));
+
+FTCPE_PC_0_0: FTCPE port map (PC_0_0,PC_0_0_T,Clk,Res,'0','1');
+PC_0_0_T <= ((N_PZ_287)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CECPU AND InputBuffer(0)));
+
+FTCPE_PC_0_1: FTCPE port map (PC_0_1,PC_0_1_T,Clk,Res,'0','1');
+PC_0_1_T <= ((PC_0_0 AND N_PZ_287)
+	OR (PC_0_0 AND NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CECPU AND InputBuffer(1) AND NOT InputBuffer(0))
+	OR (PC_0_0 AND NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CECPU AND NOT InputBuffer(1) AND InputBuffer(0))
+	OR (NOT PC_0_0 AND NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	InputBuffer(1)));
+
+FTCPE_PC_0_2: FTCPE port map (PC_0_2,PC_0_2_T,Clk,Res,'0','1');
+PC_0_2_T <= ((PC_0_0 AND N_PZ_287 AND PC_0_1)
+	OR (NOT CurrentState_FSM_FFd1 AND CECPU AND InputBuffer(2) AND 
+	NOT N_PZ_287 AND NOT N_PZ_306 AND NOT N_PZ_280)
+	OR (NOT CurrentState_FSM_FFd1 AND CECPU AND NOT InputBuffer(2) AND 
+	NOT N_PZ_287 AND NOT N_PZ_306 AND N_PZ_280));
+
+FTCPE_PC_0_3: FTCPE port map (PC_0_3,PC_0_3_T,Clk,Res,'0','1');
+PC_0_3_T <= (NOT CurrentState_FSM_FFd1 AND CECPU AND NOT N_PZ_306 AND 
+	PC_Madd__add0000_Result(3)1 AND NOT PC_Madd__add0000_Result(3)13);
+
+FTCPE_PC_0_4: FTCPE port map (PC_0_4,PC_0_4_T,Clk,Res,'0','1');
+PC_0_4_T <= ((N_PZ_287 AND NOT N_PZ_339)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CECPU AND NOT InputBuffer(4) AND NOT N_PZ_339)
+	OR (NOT InputBuffer(6) AND NOT InputBuffer(7) AND 
+	NOT CurrentState_FSM_FFd1 AND CurrentState_FSM_FFd2 AND CECPU AND NOT Carry AND 
+	InputBuffer(4) AND N_PZ_339));
+
+FTCPE_PC_0_5: FTCPE port map (PC_0_5,PC_0_5_T,Clk,Res,'0','1');
+PC_0_5_T <= NOT ((NOT CE0.COMB AND NOT N_PZ_331));
+
+FTCPE_PC_0_6: FTCPE port map (PC_0_6,PC_0_6_T,Clk,Res,'0','1');
+PC_0_6_T <= ((PC_0_5 AND CE0.COMB)
+	OR (NOT PC_0_5 AND N_PZ_331));
+
+FTCPE_PC_0_7: FTCPE port map (PC_0_7,PC_0_7_T,Clk,Res,'0','1');
+PC_0_7_T <= ((PC_0_5 AND CE0.COMB AND PC_0_6)
+	OR (NOT PC_0_5 AND N_PZ_331 AND NOT PC_0_6));
+
+
+PC_Madd__add0000_Result(3)1 <= ((NOT InputBuffer(3))
+	OR (NOT CurrentState_FSM_FFd1 AND N_PZ_341)
+	OR (NOT InputBuffer(2) AND NOT PC_0_2)
+	OR (NOT InputBuffer(2) AND NOT N_PZ_280)
+	OR (NOT PC_0_2 AND NOT N_PZ_280));
+
+
+PC_Madd__add0000_Result(3)13 <= ((NOT PC_0_0 AND NOT CurrentState_FSM_FFd1 AND N_PZ_341)
+	OR (NOT CurrentState_FSM_FFd1 AND N_PZ_341 AND NOT PC_0_1)
+	OR (NOT CurrentState_FSM_FFd1 AND N_PZ_341 AND NOT PC_0_2)
+	OR (NOT InputBuffer(3) AND NOT InputBuffer(2) AND NOT PC_0_2)
+	OR (NOT InputBuffer(3) AND NOT PC_0_2 AND NOT N_PZ_280)
+	OR (CurrentState_FSM_FFd1 AND NOT InputBuffer(3) AND 
+	NOT InputBuffer(2) AND NOT N_PZ_280)
+	OR (NOT InputBuffer(3) AND NOT InputBuffer(2) AND NOT N_PZ_341 AND 
+	NOT N_PZ_280));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C64A-7-VQ44
+
+
+   --------------------------------  
+  /44 43 42 41 40 39 38 37 36 35 34 \
+ | 1                             33 | 
+ | 2                             32 | 
+ | 3                             31 | 
+ | 4                             30 | 
+ | 5         XC2C64A-7-VQ44      29 | 
+ | 6                             28 | 
+ | 7                             27 | 
+ | 8                             26 | 
+ | 9                             25 | 
+ | 10                            24 | 
+ | 11                            23 | 
+ \ 12 13 14 15 16 17 18 19 20 21 22 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              23 Addres<3>                     
+  2 KPR                              24 TDO                           
+  3 KPR                              25 GND                           
+  4 GND                              26 VCCIO-1.8                     
+  5 KPR                              27 Addres<1>                     
+  6 KPR                              28 Addres<0>                     
+  7 VCCIO-1.8                        29 Addres<2>                     
+  8 KPR                              30 Res                           
+  9 TDI                              31 Data<4>                       
+ 10 TMS                              32 Data<0>                       
+ 11 TCK                              33 Data<1>                       
+ 12 KPR                              34 DWE                           
+ 13 KPR                              35 VCCAUX                        
+ 14 KPR                              36 Data<2>                       
+ 15 VCC                              37 Addres<5>                     
+ 16 KPR                              38 CE                            
+ 17 GND                              39 Data<3>                       
+ 18 KPR                              40 Data<5>                       
+ 19 IRE                              41 Data<6>                       
+ 20 Addres<4>                        42 Data<7>                       
+ 21 Addres<7>                        43 Clk                           
+ 22 Addres<6>                        44 DRE                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c64a-7-VQ44
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : KEEPER
+Default Voltage Standard for All Outputs    : LVCMOS18
+Input Limit                                 : 32
+Pterm Limit                                 : 28
