@@ -1,6 +1,6 @@
 Bugs
 
-As soon as this project was placed on the github, one error was founded.
+As soon as this project was placed on GitHub, one error was founded.
 The carry flag is set incorrectly when working with negative numbers.
 
 The error is here:
