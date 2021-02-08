@@ -6,5 +6,4 @@ The carry flag is set incorrectly when working with negative numbers.
 The error is here:
 ExtendedALU := ('0' & Acc) + ('0' & InputBuffer);
 ExtendedALU := ('0' & Acc) - ('0' & InputBuffer);
-
-
+Signed expansion should be used instead of zero expansion.
